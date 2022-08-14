@@ -1,0 +1,48 @@
+.overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(255 255 255 / 90%);
+}
+
+.modal {
+    max-width: 600px;
+    min-width: 320px;
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 5px #ccc;
+}
+
+.message {
+    margin-bottom: 20px;
+}
+
+.buttons-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+
+.button {
+    padding: 12px 25px;
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(20, 213, 113);
+    color: white;
+    cursor: pointer;
+  }
+  
+  .button:hover {
+    background-color: rgb(0, 191, 91);
+  }
+  
+  .button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
