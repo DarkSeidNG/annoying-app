@@ -1,10 +1,11 @@
 import React from "react";
 import ReactModal from "react-modal";
+import PropTypes from 'prop-types';
 import style from "./AnnoyingConfirmationModal.module.css";
 
 ReactModal.setAppElement("#root");
 
-function AnnoyingMessage({ showModal, closeModal, canClose = true, message }) {
+function AnnoyingConfirmationModal({ showModal, closeModal, canClose = true, message }) {
   const handleOnConfirm = () => {
     closeModal(false);
   };
@@ -28,4 +29,12 @@ function AnnoyingMessage({ showModal, closeModal, canClose = true, message }) {
   );
 }
 
-export default AnnoyingMessage;
+AnnoyingConfirmationModal.propTypes = {
+  showModal: PropTypes.bool,
+  closeModal: PropTypes.func,
+  canClose: PropTypes.bool,
+  message: PropTypes.string,
+  [PropTypes.string]: PropTypes.any,
+};
+
+export default AnnoyingConfirmationModal;
